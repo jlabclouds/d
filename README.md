@@ -58,8 +58,8 @@ julia --project make.jl
 
 ```bash
 # Open in browser
-cd docs/build
-Python -m http.server 8000
+cd build
+python -m http.server 8000
 # Visit http://localhost:8000
 ```
 
@@ -98,14 +98,21 @@ MyDocumentation.jl/
 - **[Contributing](docs/src/contributing.md)** - How to contribute
 
 ## 🛠️ Customization
-
 To use this template for your own project:
-
-1. Replace `MyDocumentation` with your package name
-2. Update `src/MyDocumentation.jl` with your code
-3. Update `docs/src/` with your documentation
-4. Update GitHub repository references in `docs/make.jl` and `.github/workflows/deploy.yml`
-5. Configure GitHub Pages settings (see below)
+cd ~/path_to_cloned_directory,
+or hotkey 'ctr+`' if open in vs code:
+```
+git config user.name "Your Name"
+git config user.email "your_email@example.com"
+```
+1. Update GitHub repository references in `docs/make.jl` (lines 66, 77 && 79) and `.github/workflows/deploy.yml`
+2. Replace `MyDocumentation` with your package name
+3. Update `src/MyDocumentation.jl` with your code
+4. Update `docs/src/` with your documentation
+5. Use Source Control to publish or
+```
+git add docs/make.jl && git commit -m "Configure deployment for GitHub Pages" && git push origin main
+```
 
 ## 🔧 GitHub Pages Configuration
 
